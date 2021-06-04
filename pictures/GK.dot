@@ -1,0 +1,26 @@
+digraph  {
+concentrate=False;
+nodesep=0.5;
+ranksep=0.5;
+splines=True;
+2134352437552 [label="{start}\n{start}"];
+2134352416048 [label="{good}\n{good, bad}"];
+2134352416336 [label="{bad}\n{good, bad}"];
+2134352416624 [label="{win}\n{win}"];
+2134352468624 [label="{lose}\n{lose}"];
+2134352469008 [label="{good}\n{good}"];
+hidden [label="", shape=none];
+2134352437552 -> 2134352416048  [action="('grab', 'grab')", key="('grab', 'grab')", label="(grab, grab)"];
+2134352437552 -> 2134352416336  [action="('grab', 'grab')", key="('grab', 'grab')", label="(grab, grab)"];
+2134352416048 -> 2134352416624  [action="('lift', 'lift')", key="('lift', 'lift')", label="(lift, lift)"];
+2134352416048 -> 2134352469008  [action="('switch', 'switch')", key="('switch', 'switch')", label="(switch, switch)"];
+2134352416048 -> 2134352468624  [action="(('switch', 'lift'), ('lift', 'switch'))", key="(('switch', 'lift'), ('lift', 'switch'))", label="(switch, lift), (lift, switch)"];
+2134352416048 -> 2134352416336  [arrowhead=none, color=2, colorscheme=set19, constraint=True, key=0, label="~1", style=dashed];
+2134352416336 -> 2134352469008  [action="('switch', 'switch')", key="('switch', 'switch')", label="(switch, switch)"];
+2134352416336 -> 2134352468624  [action="(('lift', 'lift'), ('switch', 'lift'), ('lift', 'switch'))", key="(('lift', 'lift'), ('switch', 'lift'), ('lift', 'switch'))", label="(lift, lift), (switch, lift), (lift, switch)"];
+2134352469008 -> 2134352416624  [action="('lift', 'lift')", key="('lift', 'lift')", label="(lift, lift)"];
+2134352469008 -> 2134352469008  [action="('switch', 'switch')", dir=back, key="('switch', 'switch')", label="(switch, switch)"];
+2134352469008 -> 2134352468624  [action="(('switch', 'lift'), ('lift', 'switch'))", key="(('switch', 'lift'), ('lift', 'switch'))", label="(switch, lift), (lift, switch)"];
+2134352469008 -> 2134352416048  [arrowhead=none, color=1, colorscheme=set19, constraint=True, key=0, label="~0", style=dashed];
+hidden -> 2134352437552  [key=0];
+}

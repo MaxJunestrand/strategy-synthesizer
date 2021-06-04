@@ -1,0 +1,27 @@
+digraph  {
+concentrate=False;
+nodesep=0.5;
+ranksep=0.5;
+splines=True;
+3039005332960 [label="{start}"];
+3039005333536 [label="{good bolt}"];
+3039005335456 [label="{bad bolt}"];
+3039005313824 [label="{fully tightened, loosely tightened}"];
+3039005492224 [label="{lose}"];
+3039005492704 [label="{fully tightened}"];
+3039005492992 [label="{win}"];
+hidden [label="", shape=none];
+3039005332960 -> 3039005333536  [action="('take',)", key="('take',)", label=take];
+3039005332960 -> 3039005335456  [action="('take',)", key="('take',)", label=take];
+3039005333536 -> 3039005333536  [action="('take',)", dir=back, key="('take',)", label=take];
+3039005333536 -> 3039005313824  [action="('tighten',)", key="('tighten',)", label=tighten];
+3039005335456 -> 3039005333536  [action="('take',)", key="('take',)", label=take];
+3039005335456 -> 3039005492224  [action="(('take',), ('tighten',))", key="(('take',), ('tighten',))", label="take, tighten"];
+3039005313824 -> 3039005492704  [action="('tighten',)", key="('tighten',)", label=tighten];
+3039005313824 -> 3039005492992  [action="('next',)", key="('next',)", label=next];
+3039005313824 -> 3039005492224  [action="(('take',), ('tighten',), ('next',))", key="(('take',), ('tighten',), ('next',))", label="(-)"];
+3039005492704 -> 3039005492704  [action="('tighten',)", dir=back, key="('tighten',)", label=tighten];
+3039005492704 -> 3039005492992  [action="('next',)", key="('next',)", label=next];
+3039005492704 -> 3039005492224  [action="(('take',), ('tighten',))", key="(('take',), ('tighten',))", label="take, tighten"];
+hidden -> 3039005332960  [key=0];
+}

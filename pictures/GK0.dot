@@ -1,0 +1,20 @@
+digraph  {
+concentrate=False;
+nodesep=0.5;
+ranksep=0.5;
+splines=True;
+2134352468576 [label="{start}"];
+2134352468048 [label="{bad}"];
+2134352469968 [label="{good}"];
+2134352467712 [label="{lose}"];
+2134352415616 [label="{win}"];
+hidden [label="", shape=none];
+2134352468576 -> 2134352468048  [action="('grab',)", key="('grab',)", label=grab];
+2134352468576 -> 2134352469968  [action="('grab',)", key="('grab',)", label=grab];
+2134352468048 -> 2134352469968  [action="('switch',)", key="('switch',)", label=switch];
+2134352468048 -> 2134352467712  [action="(('lift',), ('switch',))", key="(('lift',), ('switch',))", label="lift, switch"];
+2134352469968 -> 2134352415616  [action="('lift',)", key="('lift',)", label=lift];
+2134352469968 -> 2134352469968  [action="('switch',)", dir=back, key="('switch',)", label=switch];
+2134352469968 -> 2134352467712  [action="(('lift',), ('switch',))", key="(('lift',), ('switch',))", label="lift, switch"];
+hidden -> 2134352468576  [key=0];
+}

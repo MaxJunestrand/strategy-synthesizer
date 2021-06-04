@@ -1,0 +1,33 @@
+digraph  {
+concentrate=False;
+nodesep=0.5;
+ranksep=0.5;
+splines=True;
+1914067155456 [label=good1];
+1914066978848 [label=lose];
+1914066571328 [label=bad1];
+1914067155600 [label=lose1];
+1913998289120 [label=start];
+1914029940496 [label=bad];
+1914067155744 [label=win];
+1914066573104 [label=start1];
+1914029886864 [label=good];
+hidden [label="", shape=none];
+1914067155456 -> 1914067155456  [action="('switch', 'switch')", dir=back, key="('switch', 'switch')", label="(switch, switch)"];
+1914067155456 -> 1914067155744  [action="('lift', 'lift')", key="('lift', 'lift')", label="(lift, lift)"];
+1914067155456 -> 1914067155600  [action="(('switch', 'lift'), ('lift', 'switch'))", key="(('switch', 'lift'), ('lift', 'switch'))", label="(switch, lift), (lift, switch)"];
+1914066571328 -> 1914067155456  [action="('switch', 'switch')", key="('switch', 'switch')", label="(switch, switch)"];
+1914066571328 -> 1914067155456  [arrowhead=none, color=2, colorscheme=set19, constraint=True, key=1, label="~1", style=dashed];
+1914066571328 -> 1914067155600  [action="(('lift', 'lift'), ('lift', 'switch'), ('switch', 'lift'))", key="(('lift', 'lift'), ('lift', 'switch'), ('switch', 'lift'))", label="(lift, lift), (lift, switch), (switch, lift)"];
+1913998289120 -> 1914029940496  [action="('grab', 'grab')", key="('grab', 'grab')", label="(grab, grab)"];
+1913998289120 -> 1914029886864  [action="('grab', 'grab')", key="('grab', 'grab')", label="(grab, grab)"];
+1914029940496 -> 1914029886864  [action="('switch', 'switch')", key="('switch', 'switch')", label="(switch, switch)"];
+1914029940496 -> 1914029886864  [arrowhead=none, color=2, colorscheme=set19, constraint=True, key=1, label="~1", style=dashed];
+1914029940496 -> 1914066978848  [action="(('lift', 'lift'), ('lift', 'switch'), ('switch', 'lift'))", key="(('lift', 'lift'), ('lift', 'switch'), ('switch', 'lift'))", label="(lift, lift), (lift, switch), (switch, lift)"];
+1914066573104 -> 1914066571328  [action="('grab', 'grab')", key="('grab', 'grab')", label="(grab, grab)"];
+1914066573104 -> 1914067155456  [action="('grab', 'grab')", key="('grab', 'grab')", label="(grab, grab)"];
+1914029886864 -> 1914029886864  [action="('switch', 'switch')", dir=back, key="('switch', 'switch')", label="(switch, switch)"];
+1914029886864 -> 1914066573104  [action="('lift', 'lift')", key="('lift', 'lift')", label="(lift, lift)"];
+1914029886864 -> 1914066978848  [action="(('switch', 'lift'), ('lift', 'switch'))", key="(('switch', 'lift'), ('lift', 'switch'))", label="(switch, lift), (lift, switch)"];
+hidden -> 1913998289120  [key=0];
+}

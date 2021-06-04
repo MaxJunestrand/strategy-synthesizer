@@ -1,0 +1,25 @@
+digraph  {
+concentrate=False;
+nodesep=0.5;
+ranksep=0.5;
+splines=True;
+2191222984656 [label="{start}\n{start}"];
+2191222970592 [label="{bad}\n{bad, good}"];
+2191222971024 [label="{good}\n{bad, good}"];
+2191222970736 [label="{lose}\n{lose}"];
+2191222055984 [label="{good}\n{good}"];
+2191204568080 [label="{win}\n{win}"];
+hidden [label="", shape=none];
+2191222984656 -> 2191222970592  [action="('grab',)", key="('grab',)", label=grab];
+2191222984656 -> 2191222971024  [action="('grab',)", key="('grab',)", label=grab];
+2191222970592 -> 2191222055984  [action="('switch',)", key="('switch',)", label=switch];
+2191222970592 -> 2191222970736  [action="(('lift',), ('switch',))", key="(('lift',), ('switch',))", label="lift, switch"];
+2191222971024 -> 2191204568080  [action="('lift',)", key="('lift',)", label=lift];
+2191222971024 -> 2191222055984  [action="('switch',)", key="('switch',)", label=switch];
+2191222971024 -> 2191222970736  [action="(('lift',), ('switch',))", key="(('lift',), ('switch',))", label="lift, switch"];
+2191222971024 -> 2191222970592  [arrowhead=none, color=1, colorscheme=set19, constraint=True, key=0, label="", style=dashed];
+2191222055984 -> 2191204568080  [action="('lift',)", key="('lift',)", label=lift];
+2191222055984 -> 2191222055984  [action="('switch',)", dir=back, key="('switch',)", label=switch];
+2191222055984 -> 2191222970736  [action="(('lift',), ('switch',))", key="(('lift',), ('switch',))", label="lift, switch"];
+hidden -> 2191222984656  [key=0];
+}

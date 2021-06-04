@@ -1,0 +1,29 @@
+digraph  {
+concentrate=False;
+nodesep=0.5;
+ranksep=0.5;
+splines=True;
+3038982261824 [label="bad bolt"];
+3038982262016 [label=start];
+3039004940080 [label=lose];
+3039005248336 [label="loosely tightened"];
+3039004903312 [label="good bolt"];
+3039005248432 [label=win];
+3039004940224 [label="fully tightened"];
+hidden [label="", shape=none];
+3038982261824 -> 3039004903312  [action="('take', 'take')", key="('take', 'take')", label="(take, take)"];
+3038982261824 -> 3039004940080  [action="(('tighten', 'tighten'), ('tighten', 'take'), ('take', 'tighten'))", key="(('tighten', 'tighten'), ('tighten', 'take'), ('take', 'tighten'))", label="(tighten, tighten), (tighten, take), (take, tighten)"];
+3038982262016 -> 3039004903312  [action="('take', 'take')", key="('take', 'take')", label="(take, take)"];
+3038982262016 -> 3038982261824  [action="('take', 'take')", key="('take', 'take')", label="(take, take)"];
+3039005248336 -> 3039004940224  [action="('tighten', 'tighten')", key="('tighten', 'tighten')", label="(tighten, tighten)"];
+3039005248336 -> 3039004940080  [action="(('take', 'tighten'), ('next', 'next'))", key="(('take', 'tighten'), ('next', 'next'))", label="(take, tighten), (next, next)"];
+3039004903312 -> 3039004903312  [action="('take', 'take')", dir=back, key="('take', 'take')", label="(take, take)"];
+3039004903312 -> 3039004940224  [action="('tighten', 'tighten')", key="('tighten', 'tighten')", label="(tighten, tighten)"];
+3039004903312 -> 3039005248336  [action="('tighten', 'tighten')", key="('tighten', 'tighten')", label="(tighten, tighten)"];
+3039004903312 -> 3038982261824  [arrowhead=none, color=1, colorscheme=set19, constraint=True, key=0, label="~0", style=dashed];
+3039004940224 -> 3039005248432  [action="('next', 'next')", key="('next', 'next')", label="(next, next)"];
+3039004940224 -> 3039004940224  [action="('tighten', 'tighten')", dir=back, key="('tighten', 'tighten')", label="(tighten, tighten)"];
+3039004940224 -> 3039004940080  [action="(('take', 'tighten'), ('tighten', 'take'))", key="(('take', 'tighten'), ('tighten', 'take'))", label="(take, tighten), (tighten, take)"];
+3039004940224 -> 3039005248336  [arrowhead=none, color=2, colorscheme=set19, constraint=True, key=0, label="~1", style=dashed];
+hidden -> 3038982262016  [key=0];
+}
