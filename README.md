@@ -44,7 +44,7 @@ ObsN = [
 ]
 ```
 
-and the program will generate strategies for it with these parameters: 
+and the program will generate strategies for it by calling this: 
 ```python
 Coalition_strat_synth(gamename="NK", noa=2, win_nodes="{win}", lose_nodes="{lose}", start_nodes="{start}", take_time = True, search= "")
 ```
