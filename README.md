@@ -10,6 +10,7 @@ The required packages to run the MKBSC (and thus the entire thing) are:
 - [pydot](https://github.com/erocarrera/pydot), which can be installed via `pip3 install pydot`
 - [Graphviz](https://www.graphviz.org/), which can be downloaded from their website
 - [Numpy](https://numpy.org/), which can be installed via `pip3 install numpy`
+
 Simply install these at the root folder.
 
 The project is set up in such a way that you can quickly get started by `main.py` in the root folder. This will run a game we created about robots trying to tighten bolts, i.e. this: 
