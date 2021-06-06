@@ -119,13 +119,13 @@ G2K0 = GK0_.KBSC()  # (G^K|0)^K
 G2K1 = GK1_.KBSC()  # (G^K|1)^K
 
 # export the GK game to ./pictures/GK.png
-#export(G2K, "G2K")
+export(G2K, "G2K")
 
-#export(GK0_, "GK0_")
-#export(GK1_, "GK1_")
+export(GK0_, "GK0_")
+export(GK1_, "GK1_")
 
-#export(G2K0, "G2K0")
-#export(G2K1, "G2K1")
+export(G2K0, "G2K0")
+export(G2K1, "G2K1")
 
 # exporting for G3K's agents. Not used in this iteration.
 #export(G2K0_, "G2K0")
